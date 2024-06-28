@@ -13,7 +13,8 @@
         >
             <form:content>
                 <Label text="Codice" />
-                <Input
+                <Input enabled="false"
+                    id="codice"
                     value="{path:'Student>/Codice', type:'sap.ui.model.type.String', constraints:{minLength: 1, maxLength: 8, 'nullable': false}}"
                     required="true"
                 />
@@ -33,7 +34,10 @@
                     required="true"
                 />
                 <Label text="Sesso" />
-                <Input value="{path:'Student>/Sesso', type:'sap.ui.model.type.String', constraints:{minLength: 1, maxLength: 1, 'nullable': false}}" required="true" />
+                <Input
+                    value="{path:'Student>/Sesso', type:'sap.ui.model.type.String', constraints:{minLength: 1, maxLength: 1, 'nullable': false}}"
+                    required="true"
+                />
                 <Label text="Corso" />
                 <Input
                     value="{path:'Student>/Corso', type:'sap.ui.model.type.String', constraints:{minLength: 2, maxLength: 5, 'nullable': false}}"
@@ -45,7 +49,9 @@
                     required="true"
                 />
                 <Label text="Lode" />
-                <Input value="{path:'Student>/Lode', type:'sap.ui.model.type.String', constraints:{minLength: 2, maxLength: 2, 'nullable': false}}" />
+                <Input
+                    value="{path:'Student>/Lode', type:'sap.ui.model.type.String', constraints:{minLength: 2, maxLength: 2, 'nullable': false}}"
+                />
             </form:content>
         </form:SimpleForm>
         <beginButton>

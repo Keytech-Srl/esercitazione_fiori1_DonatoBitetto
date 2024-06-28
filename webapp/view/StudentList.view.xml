@@ -57,6 +57,9 @@
                 <Column>
                     <Text text="Lode" />
                 </Column>
+                <Column>
+                    <Text text="Azioni" />
+                </Column>
             </columns>
             <items>
                 <ColumnListItem>
@@ -69,6 +72,7 @@
                         <Text text="{ides>Corso}" />
                         <Text text="{ides>Voto}" />
                         <Text text="{ides>Lode}" />
+                        <Button icon="sap-icon://delete" press=".deleteStudent(${ides>Codice})" />
                     </cells>
                 </ColumnListItem>
             </items>
