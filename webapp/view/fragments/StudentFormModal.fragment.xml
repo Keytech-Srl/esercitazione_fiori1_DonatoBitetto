@@ -1,0 +1,61 @@
+<core:FragmentDefinition
+    xmlns:form="sap.ui.layout.form"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+    <Dialog contentWidth="50%">
+        <form:SimpleForm
+            id="form"
+            editable="true"
+            layout="ColumnLayout"
+            columnsM="1"
+            columnsL="2"
+        >
+            <form:content>
+                <Label text="Codice" />
+                <Input
+                    value="{path:'Student>/Codice', type:'sap.ui.model.type.String', constraints:{minLength: 1, maxLength: 8, 'nullable': false}}"
+                    required="true"
+                />
+                <Label text="Nome" />
+                <Input
+                    value="{path:'Student>/Nome', type:'sap.ui.model.type.String', constraints:{minLength: 3, maxLength: 50, 'nullable': false}}"
+                    required="true"
+                />
+                <Label text="Cognome" />
+                <Input
+                    value="{path:'Student>/Cognome', type:'sap.ui.model.type.String', constraints:{minLength: 3, maxLength: 50, 'nullable': false}}"
+                    required="true"
+                />
+                <Label text="Data di nascita" />
+                <DatePicker
+                    value="{ path:'Student>/DatNascita', type:'sap.ui.model.type.Date', 'formatOptions': {'source': {pattern: 'YYYYMMdd'},pattern: 'YYYY/MM/dd'}}"
+                    required="true"
+                />
+                <Label text="Sesso" />
+                <Input value="{path:'Student>/Sesso', type:'sap.ui.model.type.String', constraints:{minLength: 1, maxLength: 1, 'nullable': false}}" required="true" />
+                <Label text="Corso" />
+                <Input
+                    value="{path:'Student>/Corso', type:'sap.ui.model.type.String', constraints:{minLength: 2, maxLength: 5, 'nullable': false}}"
+                    required="true"
+                />
+                <Label text="Voto" />
+                <Input
+                    value="{path:'Student>/Voto', type:'sap.ui.model.type.Integer', constraints:{minimum: 1, maximum: 110, 'nullable': false}}"
+                    required="true"
+                />
+                <Label text="Lode" />
+                <Input value="{path:'Student>/Lode', type:'sap.ui.model.type.String', constraints:{minLength: 2, maxLength: 2, 'nullable': false}}" />
+            </form:content>
+        </form:SimpleForm>
+        <beginButton>
+            <Button text="Save" />
+        </beginButton>
+        <endButton>
+            <Button
+                text="Close"
+                press=".closeStudentFormModal"
+            />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

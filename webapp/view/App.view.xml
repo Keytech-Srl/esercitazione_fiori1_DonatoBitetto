@@ -1,0 +1,39 @@
+<mvc:View
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt"
+    xmlns:mvc="sap.ui.core.mvc"
+    controllerName="ui5.crud.controller.App"
+>
+    <tnt:ToolPage id="toolPage" sideExpanded="false">
+        <tnt:header>
+            <tnt:ToolHeader>
+                <Button
+                    icon="sap-icon://menu2"
+                    press=".toogleExpanded"
+                />
+            </tnt:ToolHeader>
+        </tnt:header>
+        <tnt:sideContent>
+            <tnt:SideNavigation>
+                <tnt:NavigationList>
+                    <tnt:NavigationListGroup text="Main">
+                        <tnt:NavigationListItem
+                            text="Home"
+                            icon="sap-icon://home"
+                            select=".navigate('home')"
+                        />
+                        <tnt:NavigationListItem
+                            text="Home"
+                            icon="sap-icon://customer"
+                            select=".navigate('students')"
+                        />
+                    </tnt:NavigationListGroup>
+                </tnt:NavigationList>
+            </tnt:SideNavigation>
+        </tnt:sideContent>
+
+        <tnt:mainContents>
+            <App id="app" />
+        </tnt:mainContents>
+    </tnt:ToolPage>
+</mvc:View>

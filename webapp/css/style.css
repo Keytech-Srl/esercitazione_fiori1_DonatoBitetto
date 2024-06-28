@@ -1,0 +1,8 @@
+.sapTntToolPage{
+    position: static !important;
+}
+
+.sapMListHdr {
+    border-top-right-radius: unset;
+    border-top-left-radius: unset;
+}

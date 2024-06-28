@@ -1,0 +1,77 @@
+<mvc:View
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    controllerName="ui5.crud.controller.StudentList"
+>
+    <Page showHeader="false">
+        <Table
+            items="{ides>/Zet_test_Set}"
+            alternateRowColors="true"
+            mode="SingleSelectLeft"
+            selectionChange=".setStudent"
+            sticky="HeaderToolbar,ColumnHeaders"
+        >
+            <headerToolbar>
+                <OverflowToolbar>
+                    <content>
+                        <ToolbarSpacer />
+                        <Button
+                            text="Inserisci studente"
+                            icon="sap-icon://add"
+                            iconFirst="false"
+                            press=".openStudentFormModal('create')"
+                        />
+                        <Button
+                            id="editStudent"
+                            text="Modifica studente selezionato"
+                            icon="sap-icon://edit"
+                            iconFirst="false"
+                            enabled="false"
+                            press=".openStudentFormModal('edit')"
+                        />
+                    </content>
+                </OverflowToolbar>
+            </headerToolbar>
+            <columns>
+                <Column>
+                    <Text text="ID" />
+                </Column>
+                <Column>
+                    <Text text="Nome" />
+                </Column>
+                <Column>
+                    <Text text="Cognome" />
+                </Column>
+                <Column>
+                    <Text text="Data di nascita" />
+                </Column>
+                <Column>
+                    <Text text="Sesso" />
+                </Column>
+                <Column>
+                    <Text text="Corso" />
+                </Column>
+                <Column>
+                    <Text text="Voto" />
+                </Column>
+                <Column>
+                    <Text text="Lode" />
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <ObjectIdentifier title="{ides>Codice}" />
+                        <Text text="{ides>Nome}" />
+                        <Text text="{ides>Cognome}" />
+                        <Text text="{ides>DatNascita}" />
+                        <Text text="{ides>Sesso}" />
+                        <Text text="{ides>Corso}" />
+                        <Text text="{ides>Voto}" />
+                        <Text text="{ides>Lode}" />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </Page>
+</mvc:View>
